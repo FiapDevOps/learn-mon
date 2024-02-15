@@ -1,0 +1,10 @@
+groups:
+  - name: default
+    rules:
+      - alert: NodeExporterDown
+        expr:  up{job="node"} != 1
+        for: 1m
+        labels:
+          severity: high
+        annotations:
+          summary: Node exporter is not responding at instance "{{ $labels.instance }}"
