@@ -6,5 +6,5 @@ receivers:
     - name: webhook_receiver
       webhook_configs:
       # Utilize: https://webhook.site/
-        - url: 'https://webhook-test.com/XXXXXXXXX'
+        - url: 'https://webhook.site/f7dc6a60-455e-4ef2-a47f-2e4ad85ebf3e'
           send_resolved: false
