@@ -51,16 +51,6 @@ services:
     networks:
        monitoring:
 
-  cloudwatch-exporter:
-    image: quay.io/prometheus/cloudwatch-exporter:v0.15.5
-    ports:
-      - 9106:9106
-    volumes:
-      - ./cloudwatch-exporter/config/config.yml:/config/config.yml
-    restart: unless-stopped
-    networks:
-       monitoring:
-
   alertmanager:
     image: prom/alertmanager:v0.26.0
     ports:
