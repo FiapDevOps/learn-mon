@@ -20,6 +20,11 @@ scrape_configs:
     static_configs:
     - targets: ['cadvisor:8080']
 
+  - job_name: 'cloudwatch-exporter'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['cloudwatch-exporter:9106']
+
   - job_name: 'node'
     ec2_sd_configs:
       - region: us-east-1
