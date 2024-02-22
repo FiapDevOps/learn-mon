@@ -25,3 +25,7 @@ output "prometheus_endpoint_alertmanager" {
 output "prometheus_endpoint_node-exporter" {
   value = "http://${aws_instance.prometheus.public_dns}:9100"
 }
+
+output "prometheus_endpoint_containers" {
+  value = "http://${aws_instance.prometheus.public_dns}:8080/containers/"
+}
