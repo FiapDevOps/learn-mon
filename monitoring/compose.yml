@@ -56,7 +56,7 @@ services:
     ports:
       - 9106:9106
     volumes:
-      - ./cloudwatch-exporter/config.yml:config/config.yml
+      - ./cloudwatch-exporter/config/config.yml:/config/config.yml
     restart: unless-stopped
     networks:
        monitoring:
