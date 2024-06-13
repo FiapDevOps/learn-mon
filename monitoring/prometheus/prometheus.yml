@@ -41,7 +41,7 @@ scrape_configs:
       - action: labelmap
         regex: '__meta_ec2_(.+)'
 
-  - job_name: 'ec2-application'
+  - job_name: 'app'
     ec2_sd_configs:
       - region: us-east-1
         port: 8080
